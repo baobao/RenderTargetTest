@@ -23,7 +23,7 @@
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
 				// just invert the colors
-				//col = 1 - col;
+				col = 1 - col;
 				return col;
 			}
 			ENDCG

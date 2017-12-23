@@ -29,7 +29,7 @@ public class RenderTargetTest : MonoBehaviour
 
         // RenderTextureに初期カラーをセット
         var tex = new Texture2D (1, 1, TextureFormat.RGB24, false, false);
-        tex.SetPixel (1, 1, Color.red);
+        tex.SetPixel (1, 1, Color.white);
         tex.Apply ();
         Graphics.Blit (tex, _rt1);
 
