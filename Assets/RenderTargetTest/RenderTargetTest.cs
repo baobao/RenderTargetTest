@@ -24,6 +24,7 @@ public class RenderTargetTest : MonoBehaviour
     {
         _cam = GetComponent<Camera> ();
         _rt1 = new RenderTexture (600, 300, 24, RenderTextureFormat.ARGB32);
+        _rt1.name = "TestRenderTarget";
         _rt1.Create ();
 
         // RenderTextureに初期カラーをセット
@@ -48,6 +49,8 @@ public class RenderTargetTest : MonoBehaviour
 
         if (_isOutputDisplay)
             Graphics.Blit (_rt1, _mat);
+
+        Debug.Log ("Active : " + RenderTexture.active);
     }
 
     #endregion
